@@ -12,7 +12,7 @@
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
       <joint name="ElbowJRotate">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
 
