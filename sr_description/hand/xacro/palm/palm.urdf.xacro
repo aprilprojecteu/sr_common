@@ -93,7 +93,13 @@ xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom">
       <child link = "${prefix}manipulator" />
       <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" />
     </joint>
-    <link name="${prefix}manipulator" />
+    <link name="${prefix}manipulator">
+      <inertial>
+        <mass value="0.0"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+      </inertial>
+    </link>
     <joint name="${prefix}WRJ1" type="revolute">
       <parent link="${parent}" />
       <child link="${prefix}palm" />
